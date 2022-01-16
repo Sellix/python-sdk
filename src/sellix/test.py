@@ -158,5 +158,56 @@ def sellix_test_sdk(self, components=[]):
             print("  Delete payment no white label passed ✓")
             self.delete_payment(payment_white_label["uniqid"])
             print("  Delete payment white label passed ✓")
+
+        if "customers" in components:
+            print("Testing customers")
+            customer_id = self.create_customer(
+                email="sample@gmail.com",
+                name="James",
+                surname="Smith",
+                phone="3287261000",
+                phone_country_code="IT",
+                country_code="IT",
+                street_address="St. Rome 404",
+                additional_address_info=None,
+                city="Rome",
+                postal_code="0",
+                state="Italy"
+            )
+            print(customer_id)
+            print("  Create customer passed ✓")
+            self.get_customer(customer_id)
+            print("  Get customer passed ✓")
+            self.get_customers()
+            print("  Get customers passed ✓")
+            self.update_customer(customer_id,
+                                 email="sample@gmail.com",
+                                 name="James",
+                                 surname="Smith",
+                                 phone="3287261000",
+                                 phone_country_code="IT",
+                                 country_code="IT",
+                                 street_address="St. Rome 404",
+                                 additional_address_info=None,
+                                 city="Rome",
+                                 postal_code="0",
+                                 state="Italy"
+                                 )
+            print("  Update customer passed ✓")
+
+        if "subscriptions" in components:
+            print("Testing subscriptions")
+            self.create_subscription(
+                product_id="61a8de6277597",
+                coupon_code=None,
+                custom_fields={
+                    "user_id": "demo"
+                },
+                customer_id="cst_4a30a219a9d7663fdd35",
+                gateway=None
+            )
+            print("  Create subscription passed ✓")
+            self.get_subscriptions()
+            print("  Get subscriptons passed ✓")
     except self.SellixException as e:
         print(e)

@@ -11,6 +11,8 @@ class Sellix:
     from .resources.products import get_products, create_product, get_product, update_product, delete_product
     from .resources.queries import get_queries, get_query, reply_query, close_query, reopen_query
     from .resources.whitelists import get_whitelists, create_whitelist, get_whitelist, update_whitelist, delete_whitelist
+    from .resources.customers import get_customers, create_customer, get_customer, update_customer
+    from .resources.subscriptions import get_subscriptions, create_subscription, get_subscription, delete_subscription
     from .test import sellix_test_sdk
 
     class SellixException(Exception):
