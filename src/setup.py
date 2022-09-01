@@ -1,4 +1,5 @@
 from setuptools import setup, find_packages
+from pathlib import Path
 
 setup(
     name="sellix-python-sdk",
@@ -8,4 +9,6 @@ setup(
     install_requires=[
         'requests',
     ],
+    long_description=Path('../README.md').read_text(),
+    long_description_content_type='text/markdown'
 )
