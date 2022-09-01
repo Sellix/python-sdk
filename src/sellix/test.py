@@ -158,6 +158,8 @@ def sellix_test_sdk(self, components=[]):
             print("  Delete payment no white label passed ✓")
             self.delete_payment(payment_white_label["uniqid"])
             print("  Delete payment white label passed ✓")
+            self.complete_payment(payment_white_label["uniqid"])
+            print("  Complete payment white label passed ✓")
 
         if "customers" in components:
             print("Testing customers")

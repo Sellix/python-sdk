@@ -9,6 +9,10 @@ def create_payment(self, **kwargs):
         }
     )
 
+def complete_payment(self, uniqid):
+    return self.handle_response(
+        self.request(f"/payments/{uniqid}", "PUT")
+    )
 
 def delete_payment(self, uniqid):
     return self.handle_response(
