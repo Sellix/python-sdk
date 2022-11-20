@@ -4,6 +4,7 @@ import requests
 class Sellix:
     from .resources.blacklist import get_blacklists, create_blacklist, get_blacklist, update_blacklist, delete_blacklist
     from .resources.categories import get_categories, create_category, get_category, update_category, delete_category
+    from .resources.groups import get_groups, create_group, get_group, update_group, delete_group
     from .resources.coupons import get_coupons, create_coupon, get_coupon, update_coupon, delete_coupon
     from .resources.feedback import get_feedback, reply_feedback
     from .resources.orders import get_orders, get_order

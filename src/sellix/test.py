@@ -48,6 +48,23 @@ def sellix_test_sdk(self, components=[]):
             print("  Update category passed ✓")
             self.delete_category(category_uniqid)
             print("  Delete category passed ✓")
+        
+        if "groups" in components:
+            print("Testing groups")
+            group_uniqid = self.create_group(title="Software Group",
+                                                   unlisted=False,
+                                                   products_bound=[],
+                                                   sort_priority=0)
+            print("  Create group passed ✓")
+            self.get_group(group_uniqid)
+            print("  Get group passed ✓")
+            self.get_groups()
+            print("  Get groups passed ✓")
+            self.update_group(group_uniqid, title="Software",
+                                 unlisted=False, products_bound=[], sort_priority=0)
+            print("  Update group passed ✓")
+            self.delete_group(group_uniqid)
+            print("  Delete group passed ✓")
 
         if "coupons" in components:
             print("Testing coupons")
