@@ -13,7 +13,8 @@ def get_order(self, uniqid):
 
 def update_order(self, uniqid, **kwargs):
     return self.handle_response(
-        self.request(f"/orders/update/{uniqid}", "PUT", kwargs)
+        self.request(f"/orders/update/{uniqid}", "PUT", kwargs),
+        "order"
     )
 
 def issue_order_replacement(self, uniqid, **kwargs):
