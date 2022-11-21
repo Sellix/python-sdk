@@ -7,7 +7,7 @@ class Sellix:
     from .resources.groups import get_groups, create_group, get_group, update_group, delete_group
     from .resources.coupons import get_coupons, create_coupon, get_coupon, update_coupon, delete_coupon
     from .resources.feedback import get_feedback, reply_feedback
-    from .resources.orders import get_orders, get_order
+    from .resources.orders import get_orders, get_order, update_order, issue_order_replacement
     from .resources.payments import create_payment, delete_payment
     from .resources.products import get_products, create_product, get_product, update_product, delete_product
     from .resources.queries import get_queries, get_query, reply_query, close_query, reopen_query
