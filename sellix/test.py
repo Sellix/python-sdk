@@ -141,6 +141,10 @@ def sellix_test_sdk(self, components=[]):
             print("  Update product passed ✓")
             self.delete_product(product_uniqid)
             print("  Delete product passed ✓")
+            self.licensing_check(key="activation-key-#1",
+                                 product_id="demo",
+                                 hardware_id="example-id")
+            print("  Licensing check passed ✓")
 
         if "queries" in components:
             print("Testing queries")

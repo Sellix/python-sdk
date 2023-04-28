@@ -29,3 +29,8 @@ def delete_product(self, uniqid):
     return self.handle_response(
         self.request(f"/products/{uniqid}", "DELETE")
     )
+
+def licensing_check(self, **kwargs):
+    return self.handle_response(
+        self.request(f"/products/licensing/check", "POST", kwargs)
+    )
