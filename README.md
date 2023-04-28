@@ -1,6 +1,8 @@
 # Sellix Python SDK 
 
 ![tag](https://img.shields.io/github/v/tag/sellix/python-sdk?sort=date&color=blueviolet)
+![pypi](https://img.shields.io/pypi/v/sellix-python-sdk)
+![Downloads](https://static.pepy.tech/badge/sellix-python-sdk)
 
 ## Introduction
 
