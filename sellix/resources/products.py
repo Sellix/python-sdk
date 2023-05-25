@@ -34,3 +34,8 @@ def licensing_check(self, **kwargs):
     return self.handle_response(
         self.request(f"/products/licensing/check", "POST", kwargs)
     )
+
+def licensing_update_hardware_id(self, **kwargs):
+    return self.handle_response(
+        self.request(f"/products/licensing/hardware_id", "PUT", kwargs)
+    )
