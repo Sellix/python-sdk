@@ -8,7 +8,7 @@ class Sellix:
     from .resources.coupons import get_coupons, create_coupon, get_coupon, update_coupon, delete_coupon
     from .resources.feedback import get_feedback, reply_feedback
     from .resources.orders import get_orders, get_order, update_order, issue_order_replacement
-    from .resources.payments import create_payment, delete_payment
+    from .resources.payments import create_payment, delete_payment, complete_payment
     from .resources.products import get_products, create_product, get_product, update_product, delete_product, licensing_check, licensing_update_hardware_id
     from .resources.queries import get_queries, get_query, reply_query, close_query, reopen_query
     from .resources.whitelists import get_whitelists, create_whitelist, get_whitelist, update_whitelist, delete_whitelist
