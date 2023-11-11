@@ -108,9 +108,12 @@ def sellix_test_sdk(self, components=[]):
             self.issue_order_replacement(orders[0]["uniqid"],
                               quantity=1,
                               product_id="demo")
-            self.update_order(orders[0]["uniqid"],
+            self.update_custom_fields(orders[0]["uniqid"],
                               gateway="STRIPE",
                               stripe_apm="ideal")
+            self.update_order(orders[0]["uniqid"], custom_fields={
+              "user_id": "demo"
+            })
 
         if "products" in components:
             print("Testing products")

@@ -21,3 +21,8 @@ def issue_order_replacement(self, uniqid, **kwargs):
     return self.handle_response(
         self.request(f"/orders/replacement/{uniqid}", "POST", kwargs)
     )
+
+def update_custom_fields(self, uniqid, **kwargs):
+    return self.handle_response(
+        self.request(f"/orders/{uniqid}/custom_fields", "PUT", kwargs)
+    )
