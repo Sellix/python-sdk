@@ -14,7 +14,7 @@ Sellix public API for developers to access merchant resources
 
 ## Installation
 
-Install the package through composer.
+Install the package through pip.
 
 ```
 python3 -m pip install sellix-python-sdk
