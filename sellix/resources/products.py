@@ -32,7 +32,8 @@ def delete_product(self, uniqid):
 
 def licensing_check(self, **kwargs):
     return self.handle_response(
-        self.request(f"/products/licensing/check", "POST", kwargs)
+        self.request(f"/products/licensing/check", "POST", kwargs),
+        "license"
     )
 
 def licensing_update_hardware_id(self, **kwargs):

@@ -3,7 +3,7 @@ from pathlib import Path
 
 setup(
     name="sellix-python-sdk",
-    version="1.0.9",
+    version="1.0.9.1",
     packages=find_packages(),
     url='https://github.com/Sellix/python-sdk',
     install_requires=[
